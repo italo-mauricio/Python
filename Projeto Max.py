@@ -440,7 +440,7 @@ elif user == "utilites":
         while user == 'yes':
             print('Welcome to utilities manu!!!')
             print('Please choose from the options below!')
-            print('''            =======================================================
+            print('''                ===================================================
             ==================== Utilities \U0001f5fa\uFE0F  =====================
             ================ 1 - Leap Year Calendar \U0001F4C5 ==================
             =================== 
@@ -449,46 +449,69 @@ elif user == "utilites":
             ''')
 
             user = str(input("What's your choice: ")).lower()
-            
-            if user == '1':
-                print('Welcome to the leap year calculator!')
-                print("let's check if the year you entered is valid or not")
-                day = int(input('Inform the day: '))
-                month = int(input('Inform the month: '))
-                year = int(input('Inform the year: '))
-                leap = year % 4 == 0 and year % 100 != 0 or year % 400 ==0
+            i = 0
+            while True:
+                if user == '1':
+                    print('Welcome to the leap year calculator!')
+                    print("let's check if the year you entered is valid or not")
+                    day = int(input('Inform the day: '))
+                    month = int(input('Inform the month: '))
+                    year = int(input('Inform the year: '))
+                    leap = year % 4 == 0 and year % 100 != 0 or year % 400 ==0
 
-                print('You informed: month {} of the day {} of the year {}'.format(month, day, year))
+                    print('You informed: month {} of the day {} of the year {}'.format(month, day, year))
 
-                if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
-                    if day <= 31:
-                        print('Invalid Date')
-                elif day > 31:
-                    print('Invalid Date')
+                    if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
+                        if day <= 31:
+                            print('Date verification: Valid Day \u2714\uFE0F')
+                        
+                    elif day > 31:
+                        print('Date verification: Invalid Day \u274C')
 
-                if month == 4 or month == 6 or month == 9 or month == 11:
-                    if day <= 30:
-                        print('Valid Date')
-                elif day > 30 and month == 4 or month == 6 or month == 9 or month == 11:
-                        print('Invalid Date')
-                        if month <= 12 and month != 0:
-                            print('Valid Month')
-                        elif month > 12:
-                            print('Valid Month')
-                if month == 2 and day > 31:
-                        print('Valid Month')
+                    if month == 4 or month == 6 or month == 9 or month == 11:
+                        if day <= 30:
+                            print('Date verification: Valid Date \u2714\uFE0F')
+                    elif day > 30 and month == 4 or month == 6 or month == 9 or month == 11:
+                            print('Date verification: Invalid Date \u274C')
+                            if month <= 12 and month != 0:
+                                print('Date verification: Valid Month \u2714\uFE0F')
+                            elif month > 12:
+                                print('Date verification: Valid Month \u2714\uFE0F')
+                    if month == 2 and day > 31:
+                            print('Date verification: Valid Month \u2714\uFE0F')
 
-                if month == 2 and day >= 29 and leap == 0:
-                    print('Invalid date, does not exist this year')
-                elif month == 2 and day <= 29 and leap:
-                    print('Valid date, leap year')
-                elif month == 2 and day <= 28:
-                    print('Valid date, leap year')
+                    if month == 2 and day >= 29 and leap == 0:
+                        print('Date verification: Invalid date, does not exist this year \u274C')
+                    elif month == 2 and day <= 29 and leap:
+                        print('Date verification: Valid date, leap year \u2714\uFE0F')
+                    elif month == 2 and day <= 28:
+                        print('Date verification: Valid date, leap year \u2714\uFE0F')
+                    elif day >= 32:
+                        print('Date verification: Invalid day \u274C')
+                    elif month >= 12:
+                        print('Date verification: Invalid Month \u274C')
+                    
 
-                if year % 4 == 0 and year % 100 != 0 or year % 400 ==0:
-                    print('Leap Year!')
-                else:
-                    print('Non-leap year')
+                    if year % 4 == 0 and year % 100 != 0 or year % 400 ==0:
+                        print('Leap Year \u2714\uFE0F')
+                    else:
+                        print('Non-leap year \u274C')
+                print('Loading...')
+                time.sleep(1)
+                print()
+                print('Welcome to utilities manu!!!')
+                print('Please choose from the options below!')
+                print('''                ===================================================
+                ==================== Utilities \U0001f5fa\uFE0F  =====================
+                ================ 1 - Leap Year Calendar \U0001F4C5 ==================
+                =================== 
+                
+                
+                ''')
+
+                user = str(input("What's your choice: ")).lower()
+                i+=1
+                        
                        
                         
                         
