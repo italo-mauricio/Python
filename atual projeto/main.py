@@ -1,6 +1,8 @@
 import os
 from clientes import telaprincipalcliente
 from vendas import sistemavendas
+from promocao import menupromocoes
+
 cliente = ' '
 os.system('cls')
 while cliente != 0:
@@ -19,14 +21,14 @@ while cliente != 0:
 
         cliente = input('O que você deseja: ')
 
-        if cliente == '1': # caso digite 1, ele acessa o sistema para cadastramento de produtos
+        if cliente == '1': # caso digfgtite 1, ele acessa o sistema para cadastramento de produtos
             sistemavendas()
 
         elif cliente == '2': # caso digite 2, ele acessa o sistema para cadastrar os clientes
             telaprincipalcliente()
 
         elif cliente == '3': # caso ele digite 3, acessa as promoções (EM DESENVOLVIMENTO!)
-            print('oi')
+            menupromocoes()
 
         elif cliente == '4': # caso ele digite 4, sai do sistema
             print('Obrigado, volte sempre!')
