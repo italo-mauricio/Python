@@ -39,7 +39,6 @@ while aluno != '0':
        
         aluno = input('Qual unidade você deseja acessar: ')
         i += 0
-            
 
     elif aluno == '2':
         print('Você escolheu verificar as notas da segunda unidade')
