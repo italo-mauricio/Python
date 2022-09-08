@@ -35,5 +35,5 @@ print(c.index(5, 1))
 #exemplo:
 
 pessoa = ('gustavo', 39, 'M', 89.9)
-del(pessoa[]) # podemos usar o del para apagar a tupla e não posso deletar somend 1 elemento da tupla, tenho que deletar ela por inteira.
+del(pessoa) # podemos usar o del para apagar a tupla e não posso deletar somend 1 elemento da tupla, tenho que deletar ela por inteira.
 print(pessoa)
