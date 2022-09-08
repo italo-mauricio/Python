@@ -1,9 +1,16 @@
-num1 = input("Digite um número: ")
-num2 = input("Digite um número: ")
-num3 = input("Digite um número: ")
-num4 = input("Digite um número: ")
+num = (int(input("Digite um número: ")),
+        int(input("Digite outro número: ")),
+          int(input("Digite um terceiro número: ")),
+            int(input("Digite o quarto número: ")))
 
-numeros = (num1, num2, num3, num4)
 
-for i in numeros:
-    print(f"Os números foram {i}")
+print(f"Você digitou os valores {num}")
+print(f"O valor 9 apareceu {num.count(9)} vezes")
+if 3 in num:
+    print(f"O valor 3 apareceu na {num.index(3)+1} posição")
+else:
+    print("O número 3 não apareceu nenhuma vez")
+print('Os valores pares digitados foram', end='')
+for n in num:
+    if n % 2 == 0:
+        print(n, end='')
