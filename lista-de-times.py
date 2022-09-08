@@ -22,7 +22,7 @@ def main():
         if opção == '1':
             timesa()
         elif opção == '2':
-            break
+            timesb()
         elif opção == '3':
             break
         elif opção == '4':
@@ -66,6 +66,30 @@ def timesa():
 
 def timesb():
     os.system("cls")
+    while True:
+        times = ('Náutico', 'Santa Cruz', 'Ituano','Boa Esporte',
+        'Criciuma', 'Flamengo-CE', 'Vasco-PI', 'Corinthians-RN', 'Atlético-RN',
+        'Botafogo-PI', 'Brasiliense', 'Barcelona-PI', 'Rondonópolis', 'Fluminense-CE',
+        'Sport', 'Guarani', 'Curitiba', 'Jec', 'Ponte Preta-PR',
+        'Atlético-GO')
+
+        print(f'''Lista de todos os times da Série B do Brasileirão
+
+            Lista de times {times}
+
+            Os cinco primeiros {times[:5]}
+
+            Os quatro últimos são {times[-4:]}
+
+            Os times em ordem alfabética{sorted(times)}
+
+
+        ''')
+
+        cont = input("Aperte ENTER para retornar ao Menu...")
+        main()
+
+
 
 
 
