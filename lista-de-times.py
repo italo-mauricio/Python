@@ -24,14 +24,14 @@ def main():
         elif opção == '2':
             timesb()
         elif opção == '3':
-            break
+            timesc()
         elif opção == '4':
             print("Obrigado pela preferência.")
             break
         else:
             print('Opção inválida!')
 
-
+main()
 
 
 
@@ -121,4 +121,3 @@ def timesc():
 
 
 
-main()
