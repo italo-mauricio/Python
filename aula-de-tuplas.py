@@ -29,3 +29,11 @@ b = (5, 8, 1, 2)
 c = b + a
 print(c)
 print(c.index(5, 1)) 
+
+# posso ter dados de tipos diferentes nas tuplas
+
+#exemplo:
+
+pessoa = ('gustavo', 39, 'M', 89.9)
+del(pessoa[]) # podemos usar o del para apagar a tupla e não posso deletar somend 1 elemento da tupla, tenho que deletar ela por inteira.
+print(pessoa)
