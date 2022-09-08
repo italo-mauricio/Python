@@ -2,22 +2,33 @@ import os
 
 def main():
     os.system("cls")
+    while True:
+        print(f'''
+        | ==================================================================== |
+        |                        Brasileirão Assaí                             |
+        | ==================================================================== |
+        |                                                                      |
+        |                    Acessar Tabela Série A - 1                        |
+        |                    Acessar Tabela Série B - 2                        |                   
+        |                    Acessar Tabela Série C - 3                        |         
+        |                    Sair - 4                                          | 
+        |                                                                      |
+        | ==================================================================== |
 
-    print(f'''
-    | ==================================================================== |
-    |                        Brasileirão Assaí                             |
-    | ==================================================================== |
-    |                                                                      |
-    |                    Acessar Tabela Série A - 1                        |
-    |                    Acessar Tabela Série B - 2                   
-    |
-    |
-    |
+        ''')
+        opção = ' '
+        opção = input("Escolha uma opção: ")
 
-    
-    
-    
-    ''')
+        if opção == '1':
+            timesa()
+        elif opção == '2':
+            break
+        elif opção == '3':
+            break
+        elif opção == '4':
+            break
+        else:
+            print('Opção inválida!')
 
 
 
@@ -27,6 +38,7 @@ def main():
 
 
 def timesa():
+    os.system("cls")
     while True:
         times = ('Corinthians', 'Palmeiras', 'Santos','Grêmio',
         'Cruzeiro', 'Flamengo', 'Vasco', 'Chapecoense', 'Atlético',
@@ -44,16 +56,19 @@ def timesa():
 
             Os times em ordem alfabética{sorted(times)}
 
-            O sport está na posição {times.index("Sport Recife")}
-
-
 
         ''')
 
+        cont = input("Aperte ENTER para retornar ao Menu...")
+        main()
+
+
+
+def timesb():
+    os.system("cls")
 
 
 
 
 
-
-
+main()
