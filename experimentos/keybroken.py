@@ -5,16 +5,16 @@ from datetime import timedelta
 from random import choice, seed, random
 from itertools import combinations_with_replacement
 
-'''values = string.ascii_letters  # todos os caracteres maiúsculos e minúsculos
+values = string.ascii_letters  # todos os caracteres maiúsculos e minúsculos
 values += string.punctuation   # caracteres acentuados    
 values += string.digits  # números de 0 a 9 
-tamanho = 10
+tam = 10
 senha = " "
 
-for i in range(tamanho):
+for i in range(tam):
     senha += choice(values)
 
-print(senha)'''
+print(senha)
 
 def main(args):
 
@@ -22,7 +22,7 @@ def main(args):
     valores += string.digits
     valores += string.punctuation
 
-    tamanho = 5
+    tamanho =  5    # cuidado ao definir o tamanho da senha, pois consumirá bastante memória do seu PC
 
     init_temp = time.time()
     gerar_senhas(valores, tamanho)
