@@ -9,8 +9,6 @@ from collections import namedtuple   # usando a biblioteca para nomear tuplas
     elas não podem ser alteradas. Porém, tuplas podem ter objetos mutáveis como listas por exemplo
 
 
-
-
 '''
 # Exemplo de tuplas com objetos mutáveis
 
@@ -46,10 +44,6 @@ print(clum_coordenadas.Longitude)
 
 '''
 
-
-
-
-
 lanche = ('hamburguer', 'pizza', 'pudim')
 # Tuplas são imutáveis
 # exemplo {Lanche[1] = 'refrigerante' '} daria erro de syntax, pois tuplas são imutáveis
@@ -68,7 +62,6 @@ for pos, comida in enumerate(lanche): # o Enumerate retorna tanto o dado, quanto
     print(f'Eu vou comer {comida} na posição {pos}')
 
 print ('comi pra caramba')
-
 
 
 # trabalhando com index
