@@ -30,6 +30,23 @@ print(minha_tupla)
 
 # Exemplo de tuplas nomeadas com a função namedtuple()
 
+coordenadas = namedtuple('coordenadas', ['Latitude', 'Longitude'])
+clum_coordenadas = coordenadas(-25.232123, Longitude=-46.234565)
+
+print(clum_coordenadas)
+print(clum_coordenadas[0])
+print(clum_coordenadas.Latitude)
+print(clum_coordenadas.Longitude)
+
+'''
+    A função namedtuple() é basicamente uma fábrica de tuplas nomeadas, ela retorna um objeto de uma subclasse
+    de uma tupla, além de dar acesso aos elementos colocados através do índice.
+
+    Ou seja, eu não precisei declarar abaixo a latitude como termo, ele já foi inserido através do método.
+
+'''
+
+
 
 
 
