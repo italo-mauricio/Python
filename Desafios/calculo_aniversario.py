@@ -3,9 +3,12 @@ from datetime import date
 '''
     Esse é um programinha básico para comparar datas de anivesário.
 
-
 '''
 
+
+def numOfDays(date1, date2):
+    return (date2-date1).days
+     
 
 
 def origem():
@@ -25,15 +28,22 @@ def origem():
         day = date.today().day
         month = date.today().month
         year = date.today().year
+     
+
 
         # a idade eu faço o ano atual menos o ano origem
         age = year - ano_origem
 
         # agora eu faço a comparação, se o mês de origem e o dia origem forem iguais ao dia atual
         # então hoje é o seu aniversário, e digo quantos anos você tem
-
+        date1 = date(ano_origem, mes_origem, dia_origem)
+        date2 = date(year, day, month)
+        print("\nVocê nasceu a exatamente: ")
+        print(numOfDays(date1, date2), "dias")
+                
         if mes_origem == month and dia_origem == day:
             print('Você tem: {} anos'.format(age))
+       
             print('Hoje é o seu aniversário')
         else:
             # se não, digo quantos anos você tem igualmente e digo que hoje não é seu aniversário
