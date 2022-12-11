@@ -1,4 +1,5 @@
 from re import A
+from collections import namedtuple   # usando a biblioteca para nomear tuplas
 
 '''
     Aqui temos uma pequena aula sobre Tuplas, que servem para armazenar dados e trabalhar com eles.
@@ -11,7 +12,7 @@ from re import A
 
 
 '''
-# exemplo de tuplas com objetos mutáveis
+# Exemplo de tuplas com objetos mutáveis
 
 minha_tupla = ([1,2,3,4], ['a', 'b', 'c'])
 print(minha_tupla)
@@ -23,8 +24,11 @@ print(minha_tupla)
     são mutáveis, na linha abaixo "minha_tupla[0].append(10)" eu uso o método append, para inserir um novo
     número elemento na tupla. no caso o "10".
 
+    Lembrando, não alteramos nada na tupla, apenas na lista.
+
 '''
 
+# Exemplo de tuplas nomeadas com a função namedtuple()
 
 
 
