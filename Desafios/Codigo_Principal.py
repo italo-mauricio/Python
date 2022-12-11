@@ -1,5 +1,7 @@
 import re
 from time import sleep
+from validacoes import *
+import os
 
 
 
@@ -12,27 +14,44 @@ dicionario = {
             }
 #função de cadastro do cliente.
 def cadastrocliente():
+    os.system("cls")
+    print('''
     
-    print('''Bem vindo ao nosso Sistema Integrado!
-             Aqui você será muito bem atendido
-             Vamos cadastrar você em instantes!
-             Carregando...
+            Bem vindo ao nosso Sistema Integrado!
+            Aqui você será muito bem atendido
+            Vamos cadastrar você em instantes!
+            Carregando...
+
     ''')
     sleep(1)
-    nome = input("Por favor, digite o seu nome: ")
-    nascimento = input("Digite a sua data de nascimento: ")
-    email = input("Digite o seu email: ")
-    #espaço para validação futura de Email
+    os.system("cls")
+    while True:
+        nome = input("Por favor, digite o seu nome: ")
+        if validstring(nome):
+            break
+        else:
+            print("Nome inválido!")
+    while True:
+        nascimento = input("Digite o dia do seu nascimento (d/m/y): ")   
+        if data_valida(nascimento):
+            break
+        else:
+            print("Data inválida")
+    while True:
+        email = input("Digite o seu email: ")
+        if validemail(email):
+            break
+        else:
+            print("Email inválido")
     endereco = input("Digite o seu endereço: ")
     complemento = input("Digite o seu complemento(Opcional): ")
-
 
     cpf=' '
     while cpf != cadastrocpf(cpf):
         cpf = input("Por favor, digite um CPF válido: ")
         if cadastrocpf(cpf):
             dicionario[cpf] = [nome,nascimento,email,endereco,complemento]
-            print(dicionario)
+            print(dicionario[cpf])
             break
             
         else:
@@ -150,10 +169,6 @@ def validate(email):
     else:
         return False
  
-    
-
-
-
 
 
 #Essa função serve para validar o CPF do cliente.

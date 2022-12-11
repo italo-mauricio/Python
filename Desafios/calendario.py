@@ -1,6 +1,13 @@
 import calendar
 from datetime import *
 
+'''
+    Utilização básica da biblioteca calendar, uma aplicação prática de como funciona ela
+
+'''
+
+
+# defino o ano, e os meses até 12
 yy = 2022
 mm = 1
 mm1 = 2
@@ -16,6 +23,7 @@ mm11 = 11
 mm12 = 12
 
 
+# após isso, só preciso printar eles dessa forma.
 
 print(calendar.month(yy,mm)), print(calendar.month(yy, mm1))
 print(calendar.month(yy,mm3)), print(calendar.month(yy, mm4))
