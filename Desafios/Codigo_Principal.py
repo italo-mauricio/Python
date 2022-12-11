@@ -3,15 +3,19 @@ from time import sleep
 from validacoes import *
 import os
 
+'''
+    Neste exemplo trago um pequeno CRUD, mas o que seria CRDU?
 
+    C = create
+    R = read
+    u = update
+    d = delete
 
-dicionario = {
-               
-            '183.305.880-17': ['Erick Bezerra Ribeiro Trindade', '04/06/2003', 'erickbrtrindade@gmail.com', 'Rua Olegário Vale 1290 Centro', ''],
-            '316.267.110-89': ['Manuelly Rodrigues Victor', '24/06/2000', 'manuellyrodrigues@gmail.com', 'Rua Capitão antonio Martins 88', 'apartamento'],
-            '059.509.594-18': ['Italo Mauricio ', '30/30/1998', 'italomauricio@gmail.com', 'Rua dos Potros 1340', 'casa']
+    é basicamente o que conhecemos como Menu integrado
 
-            }
+'''
+
+dicionario = {}
 #função de cadastro do cliente.
 def cadastrocliente():
     os.system("cls")
@@ -128,15 +132,28 @@ def visualizarcliente():
             Carregando..
         ''')
     sleep(1)
-    cpf = input('Digite o CPF cadastrador por gentileza!: ')
-    if cpf in dicionario:
-        print('Perfeito, encontramos este usuário(a) em nosso sistema!')
-        print(dicionario[cpf])
-        return True
-
-    else:
-        print('Infelizmente o CPF não foi encontrado, tente novamente!')
-        return False
+    while True:
+        cpf = input('Digite o CPF cadastrador por gentileza!: ')
+        if cpf in dicionario:
+            print('Perfeito, encontramos este usuário(a) em nosso sistema!')
+            print(f'''
+            |---------------------------------------------------------------|
+            |           Usuário encontrado em nosso sistema!                |
+            |---------------------------------------------------------------|
+            |
+            |     Nome: {dicionario[cpf][0]}
+            |     Email: {dicionario[cpf][1]}
+            |     Data de nascimento: {dicionario[cpf][2]}
+            |     Endereço: {dicionario[cpf][3]}
+            |     Complemento: {dicionario[cpf][4]}
+            |
+            |---------------------------------------------------------------|
+            ''')
+            input("Pressione ENTER tecla para sair... ")
+            break
+        else:
+            print('Infelizmente o CPF não foi encontrado, tente novamente!')
+        
 
 
 
@@ -162,6 +179,7 @@ def deletarcliente():
 
 #Função de chamada da tela principal de Menu.
 def telaprincipal():
+    os.system("cls")
     print('=='*28)
     print('''
     |-----------------------------------------------|
