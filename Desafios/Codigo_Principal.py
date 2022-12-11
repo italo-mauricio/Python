@@ -45,8 +45,8 @@ def cadastrocliente():
             print("Email inválido")
     endereco = input("Digite o seu endereço: ")
     complemento = input("Digite o seu complemento(Opcional): ")
-
     cpf=' '
+
     while cpf != cadastrocpf(cpf):
         cpf = input("Por favor, digite um CPF válido: ")
         if cadastrocpf(cpf):
@@ -60,10 +60,9 @@ def cadastrocliente():
 
     print('Parabéns, cadastro Realizado com Sucesso!!!')
     print('Aqui você terá tudo de melhor que podemmos oferecer!')
-        
-        
-            
-    telaprincipal()
+    input("Pressione qualquer tecla para sair... ")
+    os.system("cls")
+
 
 
 
@@ -123,6 +122,7 @@ def atualizarcliente():
 
  #Essa função é responsável por visualizar os dados do Cliente.   
 def visualizarcliente():
+    os.system("cls")
     print('''Olá, você escolheu a opção de visualizar um usuário já cadastrado!
             Para isso precisamos do CPF do usuário!
             Carregando..
@@ -142,7 +142,9 @@ def visualizarcliente():
 
 #Essa função deleta qualquer cliente do banco de dados, a partir da chave do CPF
 def deletarcliente():
-    print(''' Olá, você deseja apagar um banco de dados!
+    os.system("cls")
+    print('''
+              Olá, você deseja apagar um banco de dados!
               Em instantes vamos realizar esta operação!
               Carregando
         ''')
@@ -158,52 +160,20 @@ def deletarcliente():
     
 
 
-
-#Essa função estamos elaborando para validar os emails, por enquanto não estamos usando.
-
-def validate(email):
-    regex = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
-    email = dicionario[2]
-    if email == regex:
-        return True
-    else:
-        return False
- 
-
-
-#Essa função serve para validar o CPF do cliente.
-def cadastrocpf(cpf):
-    #validação do CPF do cliente
-    cpf = [int(char) for char in cpf if char.isdigit()]
- 
-    if len(cpf) != 11: #faz a verificação se o CPF do cliente tem mesmo 11 dígitos
-        return False
-    
-    if cpf == cpf [::-1]: #verifica se tem todos os números iguais, pois mesmos com os números sendo considerados inválidos, eles passam na verificação
-        return False
-
-    for i in range(9, 11): #valida os dois dígitos verificadores
-        valor = sum((cpf[num] * ((i+1) - num) for num in range(0, i)))
-        digito = ((valor * 10) % 11) % 10
-        if digito != cpf[i]:
-            return False
-    return True
-
-
-
 #Função de chamada da tela principal de Menu.
 def telaprincipal():
     print('=='*28)
     print('''
-        = SISTEMA DE GERENCIAMENTO DE CLIENTES =
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        ===== Cadastrar Cliente [1] ============
-        ===== Atualizar Dados   [2] ============
-        ===== Visualizar Dados  [3] ============
-        ===== Remover Dados     [4] ============
-        ===== Sair do Sistema   [5] ============
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        ========================================
+    |-----------------------------------------------|
+    |   = SISTEMA DE GERENCIAMENTO DE CLIENTES =    |
+    |                                               |
+    |          Cadastrar Cliente [1]                |    
+    |          Atualizar Dados   [2]                |
+    |          Visualizar Dados  [3]                |
+    |          Remover Dados     [4]                |
+    |          Sair do Sistema   [0]                |
+    |                                               |
+    |-----------------------------------------------|
     ''')
     print('=='*28)
 
@@ -217,7 +187,7 @@ def menuprincipal():
 
     usuário = telaprincipal()
 
-    while usuário != "5":
+    while True:
 
         if usuário == '1':
             cadastrocliente()
@@ -227,9 +197,10 @@ def menuprincipal():
             visualizarcliente()
         elif usuário == '4':
             deletarcliente()
-        elif usuário == '5':
-            telaprincipal()
+        elif usuário == '0':
+            break
         else:
+            os.system("cls")
             print('Opção inválida!')
 
         usuário = telaprincipal()
