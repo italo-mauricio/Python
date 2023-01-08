@@ -23,5 +23,15 @@ for i in range(0, 5):
             pos += 1
 
 print(f"Os valores digitados em ordem foram: {lista}")
+lista.sort(reverse=True)
+print(f"Os números em forma decrescente são {lista}")
+
+
+if 5 in lista:
+
+    print("O Valor 5 está na lista")
+    print(f"O valor 5 apareceu a primeira vez na posição: {lista.index(5, 0, 5)}")
+else:
+    print("O 5 não está na lista")
     
 
