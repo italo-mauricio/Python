@@ -1,7 +1,6 @@
 '''
         Exercicio de maior e menor valor numa lista
 
-
 '''
 
 

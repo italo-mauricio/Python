@@ -1,7 +1,6 @@
 #Essa função serve para validar o CPF do cliente.
 def cadastrocpf(cpf):
-    # fLAVIUS, RETIRAMOS ESSA VALIDAÇÃO DA INTERNET, NÃO CONSEGUI ACHAR O LINK
-    # NÃO CONSEGUIMOS DESENVOLVER O VALIDADOR DE CPF
+  
     #validação do CPF do cliente
     cpf = [int(caracter) for caracter in cpf if caracter.isdigit()]
  
