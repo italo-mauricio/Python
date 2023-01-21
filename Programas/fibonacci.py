@@ -15,5 +15,7 @@ while cont <= n:
     t2 = t3
     cont += 1
 
+termo = (t1 + t2) - 1
+
 print(' -> FIM')
-print('A soma dos termos apresentados é {}'.format( (t1 + t2 + t3) - 1))
+print(f'A soma dos termos apresentados é {termo}')
