@@ -19,6 +19,7 @@ print(pessoas)
 
 amigos = []
 dados = []
+total_maior_idade = total_menor_idade = 0
 
 for c in range(0, 3):
     dados.append(str(input("Nome: ")))
@@ -26,3 +27,9 @@ for c in range(0, 3):
     amigos.append(dados[:])
     dados.clear()
 print(amigos)
+
+for p in amigos:
+    if p[1] >= '21':
+        print(f'{p[0]} é maior de idade.')
+    else:
+        print(f'{p[0]} é menor de idade.')
