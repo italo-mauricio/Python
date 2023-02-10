@@ -31,5 +31,9 @@ print(amigos)
 for p in amigos:
     if p[1] >= '21':
         print(f'{p[0]} é maior de idade.')
+        total_maior_idade+=1
     else:
         print(f'{p[0]} é menor de idade.')
+        total_menor_idade+=1
+ 
+print(f'Temos {total_maior_idade} maiores e {total_menor_idade} menos de idade')
